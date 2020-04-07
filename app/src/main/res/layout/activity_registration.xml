@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.o6u.studentapp.registrationActivities.RegistrationActivity"
+    android:background="@color/colorBackSpace"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/app_bar_layout" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/guide_line_margin" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/guide_line_margin" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_inside_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/guide_line_inside_margin" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_inside_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/guide_line_inside_margin" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/registration_name_text_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/full_name"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/include">
+
+        <org.o6u.studentapp.customViews.CustomEditText
+            android:id="@+id/registration_name_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/registration_email_text_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/registration_name_text_input_layout"
+        android:hint="@string/email">
+
+        <org.o6u.studentapp.customViews.CustomEditText
+            android:id="@+id/registration_email_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/registration_id_text_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/registration_email_text_input_layout"
+        android:hint="@string/student_id">
+
+        <org.o6u.studentapp.customViews.CustomEditText
+            android:id="@+id/registration_id_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/registration_phone_text_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/registration_id_text_input_layout"
+        android:hint="@string/phone_number">
+
+        <org.o6u.studentapp.customViews.CustomEditText
+            android:id="@+id/registration_phone_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/registration_password_text_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/registration_phone_text_input_layout"
+        android:hint="@string/password"
+        app:passwordToggleEnabled="true">
+
+        <org.o6u.studentapp.customViews.CustomEditText
+            android:id="@+id/registration_password_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+    <org.o6u.studentapp.customViews.CustomButton
+        android:id="@+id/registration_submit_button"
+        style="@style/PopularButtonAccent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/submit"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_inside_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_inside_right"
+        app:layout_constraintTop_toBottomOf="@+id/registration_password_text_input_layout" />
+
+</android.support.constraint.ConstraintLayout>

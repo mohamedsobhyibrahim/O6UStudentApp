@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.o6u.studentapp.registrationActivities.LoginActivity"
+    android:background="@color/colorBackSpace">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/app_bar_layout" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/guide_line_login_margin" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/guide_line_login_margin" />
+
+    <RelativeLayout
+        android:id="@+id/login_view_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include"
+        android:padding="@dimen/content_margin">
+
+        <ImageView
+            android:id="@+id/login_logo_imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/icon_app"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_logo"/>
+    </RelativeLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/login_email_text_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/email"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/login_view_header_layout">
+
+        <org.o6u.studentapp.customViews.CustomEditText
+            android:id="@+id/login_email_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/login_password_text_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/login_email_text_input_layout">
+
+        <org.o6u.studentapp.customViews.CustomEditText
+            android:id="@+id/login_password_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+    <org.o6u.studentapp.customViews.CustomTextView
+        android:id="@+id/login_forget_password_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/forget_your_password"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/login_password_text_input_layout"/>
+
+    <org.o6u.studentapp.customViews.CustomButton
+        android:id="@+id/login_button"
+        style="@style/PopularButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/login"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/login_forget_password_text_view" />
+
+    <LinearLayout
+        android:id="@+id/login_views_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_button"
+        android:gravity="center_vertical"
+        android:weightSum="3">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorView"
+            android:layout_weight="1">
+        </View>
+
+        <org.o6u.studentapp.customViews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/or"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorView"
+            android:layout_weight="1">
+        </View>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_social_buttons_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/login_views_layout">
+
+        <org.o6u.studentapp.customViews.CustomButton
+            android:id="@+id/login_google_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/social_buttons_margin"
+            android:text="@string/google"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:drawableStart="@drawable/ic_google_plus"
+            android:paddingStart="16dp"
+            android:paddingEnd="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/back_button_google" />
+
+        <org.o6u.studentapp.customViews.CustomButton
+            android:id="@+id/login_facebook_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/social_buttons_margin"
+            android:text="@string/facebook"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:drawableStart="@drawable/ic_facebook"
+            android:paddingStart="16dp"
+            android:paddingEnd="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/back_button_facebook" />
+
+    </LinearLayout>
+
+    <org.o6u.studentapp.customViews.CustomTextView
+        android:id="@+id/login_new_account_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/don_t_have_account_sign_up_now"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/login_social_buttons_layout"/>
+
+</android.support.constraint.ConstraintLayout>

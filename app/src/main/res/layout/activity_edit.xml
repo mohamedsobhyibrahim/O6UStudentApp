@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.o6u.studentapp.activities.EditActivity"
+    android:background="@color/colorBackSpace">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/app_bar_layout" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/guide_line_margin" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/guide_line_margin" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_inside_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/guide_line_inside_margin" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_inside_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/guide_line_inside_margin" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/edit_name_text_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/full_name"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/include">
+
+        <org.o6u.studentapp.customViews.CustomEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/edit_phone_text_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/phone_number"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/edit_name_text_input_layout">
+
+        <org.o6u.studentapp.customViews.CustomEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/edit_year_text_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/year"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/edit_phone_text_input_layout">
+
+        <org.o6u.studentapp.customViews.CustomEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </android.support.design.widget.TextInputLayout>
+
+    <org.o6u.studentapp.customViews.CustomTextView
+        android:id="@+id/edit_department_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/department"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/edit_year_text_input_layout"/>
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/edit_department_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/edit_department_textView" />
+
+    <org.o6u.studentapp.customViews.CustomButton
+        android:id="@+id/edit_button"
+        style="@style/PopularButtonAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/edit_information"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_inside_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_inside_right"
+        app:layout_constraintTop_toBottomOf="@+id/edit_department_spinner" />
+
+</android.support.constraint.ConstraintLayout>

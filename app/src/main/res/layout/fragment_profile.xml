@@ -1,0 +1,154 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.o6u.studentapp.fragments.ProfileFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackSpace">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/profile_header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/colorPrimary">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_imageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:contentDescription="@string/profile_image"
+                android:src="@drawable/profile_image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <org.o6u.studentapp.customViews.CustomTextView
+            android:id="@+id/profile_name_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorWhite"
+            android:padding="8dp"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_header_layout" />
+
+        <org.o6u.studentapp.customViews.CustomTextView
+            android:id="@+id/profile_email_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_name_textView"
+            android:padding="8dp"
+            android:background="@color/colorWhite"/>
+
+        <org.o6u.studentapp.customViews.CustomTextView
+            android:id="@+id/profile_phone_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_email_textView"
+            android:padding="8dp"
+            android:background="@color/colorWhite"/>
+
+        <LinearLayout
+            android:id="@+id/profile_id_and_dept_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_phone_textView"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+
+            <org.o6u.studentapp.customViews.CustomTextView
+                android:id="@+id/profile_id_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginRight="8dp"/>
+
+            <org.o6u.studentapp.customViews.CustomTextView
+                android:id="@+id/profile_department_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorPrimary"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile_gpa_and_year_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_id_and_dept_layout"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+
+            <org.o6u.studentapp.customViews.CustomTextView
+                android:id="@+id/profile_gpa_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginRight="8dp"/>
+
+            <org.o6u.studentapp.customViews.CustomTextView
+                android:id="@+id/profile_year_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorPrimary"/>
+
+        </LinearLayout>
+
+        <org.o6u.studentapp.customViews.CustomButton
+            android:id="@+id/profile_edit_button"
+            style="@style/PopularButtonAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toLeftOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

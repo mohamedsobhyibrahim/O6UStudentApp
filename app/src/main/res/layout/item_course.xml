@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:paddingBottom="8dp"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimary">
+
+        <org.o6u.studentapp.customViews.CustomTextView
+            android:id="@+id/item_course_name_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Course Name"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+    <org.o6u.studentapp.customViews.CustomTextView
+        android:id="@+id/item_course_doctor_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:background="@color/colorBackSpace"
+        android:text="Doctor Name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_layout" />
+
+    <org.o6u.studentapp.customViews.CustomTextView
+        android:id="@+id/item_course_department_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:background="@color/colorBackSpace"
+        android:text="Department"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_course_doctor_name_textView" />
+
+    <org.o6u.studentapp.customViews.CustomTextView
+        android:id="@+id/item_course_hours_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorBackSpace"
+        android:padding="8dp"
+        android:text="Hours"
+        app:layout_constraintLeft_toRightOf="@id/item_course_department_textView"
+        app:layout_constraintTop_toBottomOf="@id/item_course_doctor_name_textView" />
+
+    <org.o6u.studentapp.customViews.CustomButton
+        android:id="@+id/item_course_add_button"
+        android:background="@drawable/back_button_accent"
+        android:textColor="@color/colorWhite"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:layout_marginRight="8dp"
+        android:text="@string/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
