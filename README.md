@@ -4,7 +4,6 @@ Android Application for October 6 University that used by Students.
 # Tools
 
 - drawable Xml Shapes
-- GuidLine
 - Firebase Console
 - Authentication
 
